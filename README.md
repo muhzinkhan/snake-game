@@ -1,58 +1,67 @@
-# Pomodoro Timer Application
+# Snake Game
 
 <p align="center">
-  <img src="assets/pomodoro.png" alt="Pomodoro Timer Logo">
+  <img src="assets/snake-game.png" alt="Snake Game Logo" height="100">
 </p>
 
 ## Overview
 
-The Pomodoro Timer is a simple Windows application built using Python and the tkinter GUI library. It helps users manage their time effectively using the Pomodoro Technique, a time management method developed by Francesco Cirillo in the late 1980s.
+The Snake Game is a classic arcade game implemented using Python and the Turtle tkinter GUI library. It provides a nostalgic gaming experience where players control a snake to eat food and grow longer without colliding with the boundaries or themselves.
 
 ## Features
 
-- Start and reset the timer.
-- Get visual and audio notifications at the end of each session.
-- Track completed Pomodoro cycles.
+- Simple and intuitive controls using arrow keys.
+- Keep track of your high score.
+- Colorful graphics for an engaging gameplay experience.
 
-## Screenshots
+## Gameplay
 
-![Main Screen](assets/Screenshot.png)
+- Use the arrow keys to control the snake's direction.
+- The snake will grow longer each time it consumes food.
+- Avoid colliding with the boundaries or yourself to continue the game.
+- The game ends when the snake collides with a boundary or itself.
 
 ## Requirements
 
-- Only Works on Windows machines. If you want, you can make supports for different platforms by forking it.😉
+- Windows machine
 
 ## Installation
 
-1. Download the zip file form the releases named `pomodoro.zip`.
-2. Extract it and run `pomodoro-timer.exe.` That's all there's to it.
+1. Go to the Releases section of this repository.
+2. Download the latest release (Snake_Game_v0.1.0.zip).
+3. Extract the downloaded ZIP file to a location of your choice.
+4. Double-click on snake-game.exe to start playing the game.
 
-## Usage
+## High Score
 
-1. Launch the application by running `pomodoro-timer.exe` inside the `Pomodoro` folder.
-2. Click the "Start" button to begin a Pomodoro session.
-3. During a session, the timer will count down the work duration.
-4. When the work duration ends, an audio and visual notification will alert you.
-5. Take a break, move on to the next session.
-6. After completing a set number of sessions, the application will track the number of completed Pomodoro cycles as checkmarks.
+- The game keeps track of your highest score achieved during gameplay.
+- You can try to beat your own high score in subsequent sessions.
+- To reset the high score set just delete the `data.txt` in the assets folder
 
-## Configuration For Developers
+## Screenshot
 
-You can customize the following parameters in `pomodoro_timer.py` and make a package out of it:
+![Gameplay Screenshot](screenshots/gameplay.png)
 
-- `WORK_MIN`: Default work duration in minutes.
-- `SHORT_BREAK_MIN`: Default break duration in minutes.
-- `LONG_BREAK_MIN`: Duration of a long break in minutes (after 4 number of pomodoros).
+## Usage for the Developers
 
-## Acknowledgments
+- It is OOP'ed so, its easier to understand:
+- A `snake.py` module for the rendering snake's body and its functionalities: create the snake, move, event listeners(up, down, left, right), snake growth, and reset position.
+- A `scoreboard.py` module for displaying the scoreboard on the screen.
+- A `food.py` module for rendering the food on the screen.
 
-- [Francesco Cirillo](http://francescocirillo.com/) for inventing the Pomodoro Technique.
+## Configuration
+
+You can customize the following parameters in `snake_game.py`:
+
+- `GRID_SIZE`: Adjust the size of the game grid for larger or smaller gameplay area.
+- `SNAKE_SPEED`: Set the snake's movement speed for different difficulty levels.
+- `FOOD_APPEAR_INTERVAL`: Control how often food appears on the screen.
 
 ## Roadmap
 
-- [ ] Add the ability to save and load custom presets.
-- [ ] Implement a task list feature.
-- [ ] Add a pause button and skip button feature.
+- [ ] Add more customizable options for gameplay.
+- [ ] Implement a multiplayer mode.
+- [ ] Create additional themes for the game.
 
 ## Contributing
 
@@ -60,6 +69,6 @@ If you'd like to contribute, please fork the repository and create a pull reques
 
 ## Support
 
-If you encounter any issues or have suggestions, please [open an issue](https://github.com/muhzinkhan/pomodoro-timer/issues).
+If you encounter any issues or have suggestions, please [open an issue](https://github.com/muhzinkhan/snake-game/issues).
 
 

@@ -1,3 +1,4 @@
+import time
 from turtle import Turtle
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
@@ -8,8 +9,12 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        with open("assets/data.txt") as data:
-            self.high_score = int(data.read())
+        try:
+            with open("assets/data.txt") as data:
+                self.high_score = int(data.read())
+        except FileNotFoundError:
+            self.high_score = 0
+
         self.color("white")
         self.penup()
         self.goto(0, 268)
@@ -28,9 +33,16 @@ class Scoreboard(Turtle):
         self.score = 0
         self.update_scoreboard()
 
-    # def game_over(self):
-    #     self.goto(0, 0)
-    #     self.write("GAME OVER", align=ALIGNMENT, font=FONT)
+    def display_game_over(self):
+        # self.penup()
+        # self.goto(0, 0)
+        # self.pendown()
+        # self.write("GAME OVER", align=ALIGNMENT, font=FONT)
+        # self.penup()
+        time.sleep(2)
+        # self.clear()
+        # self.goto(0, 268)
+        self.update_scoreboard()
 
     def increase_score(self):
         self.score += 1

@@ -1,4 +1,6 @@
+import turtle
 from turtle import Screen
+import tkinter
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
@@ -9,6 +11,8 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
+img = tkinter.Image("photo", file="assets/snake-game.png")
+turtle._Screen._root.iconphoto(True, img)
 
 snake = Snake()
 food = Food()
@@ -35,6 +39,7 @@ while game_is_on:
     # Detect collision with wall.
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         scoreboard.reset()
+        scoreboard.display_game_over()
         snake.reset()
 
     # Detect collision with tail.
