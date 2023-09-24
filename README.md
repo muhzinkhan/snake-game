@@ -1,7 +1,7 @@
 # Snake Game
 
 <p align="center">
-  <img src="assets/snake-game.png" alt="Snake Game Logo" height="100">
+  <img src="./assets/snake-game.png" alt="Snake Game Logo" height="100">
 </p>
 
 ## Overview
@@ -28,9 +28,9 @@ The Snake Game is a classic arcade game implemented using Python and the Turtle 
 ## Installation
 
 1. Go to the Releases section of this repository.
-2. Download the latest release (Snake_Game_v0.1.0.zip).
+2. Download the latest release (`Snake_Game_v0.1.0.zip`).
 3. Extract the downloaded ZIP file to a location of your choice.
-4. Double-click on snake-game.exe to start playing the game.
+4. Double-click on `snake_game.exe` to start playing the game.
 
 ## High Score
 
@@ -40,7 +40,7 @@ The Snake Game is a classic arcade game implemented using Python and the Turtle 
 
 ## Screenshot
 
-![Gameplay Screenshot](screenshots/gameplay.png)
+![Gameplay Screenshot](./screenshots/gameplay.png)
 
 ## Usage for the Developers
 
